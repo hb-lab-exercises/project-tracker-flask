@@ -27,6 +27,17 @@ def get_student():
                                github=github)
     return html
 
+@app.route("/student-create")
+def student_create():
+    """Form to add a student."""
+
+    return render_template("student_create.html")
+
+@app.route("/student-add", methods=['POST'])
+def student_add():
+    """Add a student."""
+
+    ### TO BE FINISHED
 
 if __name__ == "__main__":
     hackbright.connect_to_db(app)
