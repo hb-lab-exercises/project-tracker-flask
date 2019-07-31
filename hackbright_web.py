@@ -6,6 +6,12 @@ import hackbright
 
 app = Flask(__name__)
 
+@app.route("/student-search")
+def get_student_form():
+    """Show form for searching for a student."""
+
+    return render_template("student_search.html")
+
 
 @app.route("/student")
 def get_student():
@@ -20,6 +26,7 @@ def get_student():
                                last=last,
                                github=github)
     return html
+
 
 if __name__ == "__main__":
     hackbright.connect_to_db(app)
