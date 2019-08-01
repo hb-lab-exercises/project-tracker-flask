@@ -58,7 +58,7 @@ def show_project():
     title = request.args.get('title')
     project = hackbright.get_project_by_title(title)
 
-    return render_template("project-info.html", project=project)
+    return render_template("project_info.html", project=project)
 
 
 if __name__ == "__main__":
